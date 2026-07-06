@@ -36,7 +36,6 @@ function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
           <div className="max-w-3xl">
-            <div className="mb-5 inline-flex rounded-full border border-border-pink bg-white/70 px-4 py-2 text-sm font-bold text-dark-pink shadow-lg backdrop-blur-xl">Premium Rotaract website template</div>
             <h1 className="font-display text-5xl font-extrabold leading-[1.03] text-foreground md:text-6xl lg:text-7xl">
               Rotaract Club of St. Ann&apos;s
             </h1>
