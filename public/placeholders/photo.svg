@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Upload Club Photo Here">
+  <rect width="1200" height="800" rx="56" fill="#FFF7FA"/>
+  <path d="M0 620 260 420 420 560 610 320 1200 690v110H0z" fill="#FCE4EC"/>
+  <circle cx="890" cy="210" r="92" fill="#FF5C93" opacity=".28"/>
+  <rect x="72" y="72" width="1056" height="656" rx="44" fill="none" stroke="#E91E63" stroke-width="8" stroke-dasharray="24 22"/>
+  <text x="600" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#C2185B">Upload Club Photo Here</text>
+  <text x="600" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#6B7280">Replace this placeholder with official imagery</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Replace with Official Logo">
+  <rect width="800" height="800" rx="190" fill="#FFF7FA"/>
+  <circle cx="400" cy="400" r="236" fill="none" stroke="#E91E63" stroke-width="46" stroke-dasharray="42 32"/>
+  <circle cx="400" cy="400" r="118" fill="#FCE4EC" stroke="#C2185B" stroke-width="24"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#C2185B">TEMP</text>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#6B7280">LOGO</text>
+</svg>
