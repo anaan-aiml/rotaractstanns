@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { FiCheckCircle } from "react-icons/fi";
+import Image from "next/image";
+import { FiCalendar, FiCheckCircle, FiClock, FiMapPin } from "react-icons/fi";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/reveal";
 import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
@@ -10,9 +11,9 @@ export const metadata: Metadata = pageMeta.membership;
 
 const benefits = ["Leadership roles", "Service projects", "Fellowship events", "Professional development", "District networking", "Mentorship opportunities"];
 const faqs = [
-  ["Who can apply?", "Replace this with official eligibility criteria, age range, student/member requirements, and application cycle."],
-  ["Is prior volunteering required?", "Placeholder answer. Add the club's real expectations and onboarding process."],
-  ["How are members selected?", "Placeholder answer for interviews, forms, induction, dues, and committee placement."]
+  ["Who can apply?", "Anyone with genuine interest, curiosity, and the willingness to grow can apply. Rotaract welcomes students who want to learn, serve, take initiative, and become more confident through real experiences."],
+  ["Is prior knowledge required?", "No prior knowledge or previous volunteering experience is required. If you are open to learning, ready to participate, and excited to contribute, you can begin your Rotaract journey with us."],
+  ["How are cabinet members selected?", "Cabinet members are selected through an interview process that looks at commitment, communication, responsibility, teamwork, and the willingness to lead. The focus is on potential, sincerity, and readiness to contribute to the club."]
 ];
 
 export default function MembershipPage() {
@@ -28,11 +29,26 @@ export default function MembershipPage() {
         </div>
       </section>
       <section className="bg-white py-24">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-[0.9fr_1.1fr] md:px-6">
-          <Card><h2 className="font-display text-4xl font-bold">Eligibility</h2><p className="mt-5 leading-8 text-muted">Replace this text with official eligibility, attendance, induction, and dues information. The template keeps details visible and easy to update.</p></Card>
-          <Card>
+        <div className="mx-auto grid max-w-7xl items-start gap-8 px-4 lg:grid-cols-[0.9fr_1.1fr] md:px-6">
+          <Card className="p-3">
+            <div className="relative aspect-[1131/1600] overflow-hidden rounded-[20px] border border-border-pink bg-soft-pink">
+              <Image
+                src="/events/orientation-session.png"
+                alt="Orientation Session poster for Rotaract Club of St. Ann's College for Women"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+            </div>
+          </Card>
+          <Card className="h-fit">
             <h2 className="font-display text-4xl font-bold">Register With Us</h2>
-            <p className="mt-5 leading-8 text-muted">Applications and registrations are collected through the official Google Form. Click below to open the form in a new tab.</p>
+            <p className="mt-5 leading-8 text-muted">Join the orientation session and begin your Rotaract journey with St. Ann&apos;s.</p>
+            <div className="mt-7 grid gap-4">
+              <div className="flex gap-3 rounded-2xl bg-soft-pink/70 p-4 text-sm font-semibold text-foreground"><FiCalendar className="mt-0.5 shrink-0 text-primary-pink" />8th July, 2026</div>
+              <div className="flex gap-3 rounded-2xl bg-soft-pink/70 p-4 text-sm font-semibold text-foreground"><FiClock className="mt-0.5 shrink-0 text-primary-pink" />12.30 pm to 2.30 pm for 1st Years • 7.30 pm to 8.30 pm for 2nd & 3rd Years</div>
+              <div className="flex gap-3 rounded-2xl bg-soft-pink/70 p-4 text-sm font-semibold text-foreground"><FiMapPin className="mt-0.5 shrink-0 text-primary-pink" />St Joseph&apos;s Auditorium / Google Meet</div>
+            </div>
             <div className="mt-8"><PremiumLink href={registrationFormUrl}>Open Registration Form</PremiumLink></div>
           </Card>
         </div>

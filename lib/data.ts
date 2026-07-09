@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { FiAward, FiBookOpen, FiCalendar, FiHeart, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiTarget, FiUsers, FiYoutube, FiZap } from "react-icons/fi";
+import { FiAward, FiCalendar, FiHeart, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiTarget, FiUsers, FiYoutube, FiZap } from "react-icons/fi";
 
 export const registrationFormUrl = "https://forms.gle/rFtTo271Eohw5pVT8";
 
@@ -19,7 +19,7 @@ export const stats = [
   { value: 120, suffix: "+", label: "Service hours planned", icon: FiHeart },
   { value: 18, suffix: "+", label: "Template events", icon: FiCalendar },
   { value: 9, suffix: "+", label: "Impact themes", icon: FiTarget },
-  { value: 35, suffix: "+", label: "Member slots", icon: FiUsers }
+  { value: 35, suffix: "+", label: "Member slots open", icon: FiUsers }
 ];
 
 export const values = [
@@ -71,6 +71,25 @@ export const projects = [
   { title: "Fundraising", category: "Fundraising", desc: "Placeholder for cause-led fundraisers and sponsor-supported programs.", impact: "5 campaigns" }
 ];
 
+export const featuredAvenues = [
+  {
+    title: "International Relations",
+    desc: "Connect with Rotaract communities beyond campus through cultural exchange and district collaboration. Members learn how service can create friendships across clubs, cities, and countries."
+  },
+  {
+    title: "Community Service",
+    desc: "Work on meaningful initiatives that support real local needs through drives, awareness campaigns, and outreach. This avenue is where empathy turns into practical action."
+  },
+  {
+    title: "Club Administration",
+    desc: "Understand how a strong club is planned, documented, coordinated, and run smoothly. Members can learn meeting flow, reporting, teamwork, and behind-the-scenes leadership."
+  },
+  {
+    title: "Professional Development",
+    desc: "Build confidence through sessions, speaker interactions, communication practice, and leadership tasks. It helps members grow personally while preparing for future opportunities."
+  }
+];
+
 export const galleryItems = Array.from({ length: 12 }, (_, index) => ({
   id: index + 1,
   label: "Replace with Club Photo",
@@ -93,6 +112,5 @@ export const socials: { icon: IconType; label: string; href: string }[] = [
 
 export const contactDetails = [
   { icon: FiMail, label: "anns.rotaract@gmail.com" },
-  { icon: FiMapPin, label: "Replace with official campus or meeting location" },
-  { icon: FiBookOpen, label: "Rotaract Club of St. Ann's. Official details pending." }
+  { icon: FiMapPin, label: "St. Ann's College for Women" }
 ];

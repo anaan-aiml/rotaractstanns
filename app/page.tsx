@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FiChevronDown, FiHeart, FiUsers } from "react-icons/fi";
 import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
 import { Reveal, SectionHeader } from "@/components/reveal";
-import { events, projects, registrationFormUrl, stats } from "@/lib/data";
+import { featuredAvenues, registrationFormUrl, stats } from "@/lib/data";
 
 const heroWords = ["Service.", "Leadership.", "Fellowship.", "Impact."];
 
@@ -40,7 +40,7 @@ function Hero() {
               Rotaract Club of St. Ann&apos;s
             </h1>
             <p className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">Built for <TypedLine /></p>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">A polished, fully editable nonprofit website experience with marked spaces for official logo, club photographs, board portraits, sponsor logos, certificates, videos, and future campaigns.</p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">Empowering students to serve with purpose, build confidence, create meaningful friendships, and lead initiatives that make a real difference in the community.</p>
             <div className="mt-7 flex flex-wrap gap-4">
               <PremiumLink href={registrationFormUrl}>Join Rotaract</PremiumLink>
               <PremiumLink href="/projects" variant="ghost">Explore Projects</PremiumLink>
@@ -85,7 +85,7 @@ export default function Home() {
     <>
       <Hero />
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
-        <SectionHeader eyebrow="Introduction" title="A refined digital home for a service-minded club." body="This template is designed to be replaced with real content later while already feeling premium, complete, and launch-ready." />
+        <SectionHeader eyebrow="Introduction" title="Where service meets leadership and fellowship." body="The Rotaract Club of St. Ann's College for Women brings students together to learn, lead, and serve through meaningful projects, orientation programs, professional development, and community-focused initiatives." />
         <div className="grid gap-5 md:grid-cols-4">{stats.map((stat) => <StatCard key={stat.label} {...stat} />)}</div>
       </section>
       <section className="bg-white py-24">
@@ -93,17 +93,23 @@ export default function Home() {
           <Reveal><PlaceholderImage label="Replace with Official Rotaract Club Photograph" aspect="aspect-[4/3]" /></Reveal>
           <Reveal delay={0.1}>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary-pink">About Preview</p>
-            <h2 className="font-display text-4xl font-bold md:text-6xl">Service that feels organized, human, and ambitious.</h2>
-            <p className="mt-6 text-lg leading-8 text-muted">Use this space for club history, district alignment, meeting culture, flagship events, and the unique voice of St. Ann&apos;s Rotaract.</p>
+            <h2 className="font-display text-4xl font-bold md:text-6xl">A student-led club built on action, growth, and impact.</h2>
+            <p className="mt-6 text-lg leading-8 text-muted">Chartered in 2005, the club has continued to create opportunities for students to develop confidence, organize initiatives, build friendships, and contribute to society with purpose.</p>
             <div className="mt-8"><PremiumLink href="/about" variant="ghost">Read About Us</PremiumLink></div>
           </Reveal>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
-        <SectionHeader eyebrow="Featured" title="Events and projects with room for the real story." />
+        <SectionHeader eyebrow="Featured" title="Explore the avenues of Rotaract." body="These areas help members discover where they want to serve, lead, and grow. Photos can be added to each card later." />
         <div className="grid gap-6 lg:grid-cols-2">
-          {events.slice(0, 2).map((event) => <Card key={event.title}><PlaceholderImage label="Upload Event Banner Here" aspect="aspect-[16/9]" /><p className="mt-5 text-sm font-bold text-primary-pink">{event.date} • {event.venue}</p><h3 className="mt-2 font-display text-2xl font-bold">{event.title}</h3><p className="mt-3 text-muted">{event.desc}</p></Card>)}
-          {projects.slice(0, 2).map((project) => <Card key={project.title}><PlaceholderImage label="Upload Project Image Here" aspect="aspect-[16/9]" /><p className="mt-5 text-sm font-bold text-primary-pink">{project.impact}</p><h3 className="mt-2 font-display text-2xl font-bold">{project.title}</h3><p className="mt-3 text-muted">{project.desc}</p></Card>)}
+          {featuredAvenues.map((avenue) => (
+            <Card key={avenue.title}>
+              <PlaceholderImage label="Upload Avenue Photo Here" aspect="aspect-[16/9]" />
+              <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-pink">Rotaract Avenue</p>
+              <h3 className="mt-2 font-display text-2xl font-bold">{avenue.title}</h3>
+              <p className="mt-3 leading-7 text-muted">{avenue.desc}</p>
+            </Card>
+          ))}
         </div>
       </section>
       <section className="bg-white py-24">
