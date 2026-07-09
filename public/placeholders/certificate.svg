@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="800" viewBox="0 0 1100 800" role="img" aria-label="Replace with Certificate">
   <rect width="1100" height="800" rx="44" fill="#FFFFFF"/>
-  <rect x="70" y="70" width="960" height="660" rx="28" fill="#FFF7FA" stroke="#E91E63" stroke-width="8"/>
-  <path d="M240 255h620M300 380h500M350 470h400" stroke="#F3D6E2" stroke-width="24" stroke-linecap="round"/>
-  <circle cx="830" cy="570" r="74" fill="#FCE4EC" stroke="#C2185B" stroke-width="10"/>
-  <text x="550" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#C2185B">Certificate Placeholder</text>
+  <rect x="70" y="70" width="960" height="660" rx="28" fill="#F6FBFD" stroke="#76A8C2" stroke-width="8"/>
+  <path d="M240 255h620M300 380h500M350 470h400" stroke="#D7E5EC" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="830" cy="570" r="74" fill="#E8F3F8" stroke="#3F6F86" stroke-width="10"/>
+  <text x="550" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#3F6F86">Certificate Placeholder</text>
 </svg>

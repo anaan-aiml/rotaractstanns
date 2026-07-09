@@ -1,5 +1,7 @@
 import { IconType } from "react-icons";
-import { FiAward, FiBookOpen, FiCalendar, FiHeart, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiTarget, FiTwitter, FiUsers, FiZap } from "react-icons/fi";
+import { FiAward, FiBookOpen, FiCalendar, FiHeart, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiTarget, FiUsers, FiYoutube, FiZap } from "react-icons/fi";
+
+export const registrationFormUrl = "https://forms.gle/rFtTo271Eohw5pVT8";
 
 export const navItems = [
   { href: "/", label: "Home" },
@@ -55,7 +57,7 @@ export const boardGroups = [
 ];
 
 export const events = [
-  { title: "Pink Impact Orientation", date: "Replace date", venue: "Upload venue", type: "Upcoming", desc: "A polished introduction to Rotaract, service avenues, and member opportunities.", schemaDate: "2026-09-12" },
+  { title: "Azure Impact Orientation", date: "Replace date", venue: "Upload venue", type: "Upcoming", desc: "A polished introduction to Rotaract, service avenues, and member opportunities.", schemaDate: "2026-09-12" },
   { title: "Community Care Drive", date: "Replace date", venue: "Upload venue", type: "Upcoming", desc: "Placeholder event for a neighborhood support initiative with partner spaces.", schemaDate: "2026-10-04" },
   { title: "Leadership Circle", date: "Replace date", venue: "Upload venue", type: "Past", desc: "Placeholder speaker session for leadership, teamwork, and public service.", schemaDate: "2026-04-20" },
   { title: "Green Campus Day", date: "Replace date", venue: "Upload venue", type: "Past", desc: "Placeholder sustainability event for cleanup, awareness, and action.", schemaDate: "2026-02-16" }
@@ -83,14 +85,14 @@ export const achievements = [
 ];
 
 export const socials: { icon: IconType; label: string; href: string }[] = [
-  { icon: FiInstagram, label: "Instagram", href: "#" },
-  { icon: FiLinkedin, label: "LinkedIn", href: "#" },
-  { icon: FiTwitter, label: "Twitter", href: "#" },
-  { icon: FiMail, label: "Email", href: "mailto:replace@example.com" }
+  { icon: FiInstagram, label: "Instagram", href: "https://www.instagram.com/rotaract_st.anns" },
+  { icon: FiYoutube, label: "YouTube", href: "http://www.youtube.com/@rotaractclubofstanns" },
+  { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/rotaract-club-of-st-ann-s-206381384?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+  { icon: FiMail, label: "Email", href: "mailto:anns.rotaract@gmail.com" }
 ];
 
 export const contactDetails = [
-  { icon: FiMail, label: "replace@example.com" },
+  { icon: FiMail, label: "anns.rotaract@gmail.com" },
   { icon: FiMapPin, label: "Replace with official campus or meeting location" },
-  { icon: FiBookOpen, label: "Rotaract template website. Official details pending." }
+  { icon: FiBookOpen, label: "Rotaract Club of St. Ann's. Official details pending." }
 ];

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-label="Board Member Image">
-  <rect width="900" height="1100" rx="64" fill="#FFF7FA"/>
-  <circle cx="450" cy="346" r="138" fill="#FCE4EC" stroke="#E91E63" stroke-width="10"/>
-  <path d="M210 835c34-160 144-248 240-248s206 88 240 248" fill="#FCE4EC" stroke="#C2185B" stroke-width="12" stroke-linecap="round"/>
-  <rect x="58" y="58" width="784" height="984" rx="54" fill="none" stroke="#E91E63" stroke-width="8" stroke-dasharray="22 20"/>
-  <text x="450" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#C2185B">Board Member Image</text>
+  <rect width="900" height="1100" rx="64" fill="#F6FBFD"/>
+  <circle cx="450" cy="346" r="138" fill="#E8F3F8" stroke="#76A8C2" stroke-width="10"/>
+  <path d="M210 835c34-160 144-248 240-248s206 88 240 248" fill="#E8F3F8" stroke="#3F6F86" stroke-width="12" stroke-linecap="round"/>
+  <rect x="58" y="58" width="784" height="984" rx="54" fill="none" stroke="#76A8C2" stroke-width="8" stroke-dasharray="22 20"/>
+  <text x="450" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#3F6F86">Board Member Image</text>
 </svg>

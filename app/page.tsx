@@ -3,9 +3,9 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiChevronDown, FiHeart, FiUsers } from "react-icons/fi";
-import { Card, PlaceholderImage, PremiumButton, PremiumLink } from "@/components/ui";
+import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
 import { Reveal, SectionHeader } from "@/components/reveal";
-import { events, projects, stats } from "@/lib/data";
+import { events, projects, registrationFormUrl, stats } from "@/lib/data";
 
 const heroWords = ["Service.", "Leadership.", "Fellowship.", "Impact."];
 
@@ -42,7 +42,7 @@ function Hero() {
             <p className="mt-5 text-2xl font-semibold text-foreground md:text-3xl">Built for <TypedLine /></p>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">A polished, fully editable nonprofit website experience with marked spaces for official logo, club photographs, board portraits, sponsor logos, certificates, videos, and future campaigns.</p>
             <div className="mt-7 flex flex-wrap gap-4">
-              <PremiumLink href="/membership">Join Rotaract</PremiumLink>
+              <PremiumLink href={registrationFormUrl}>Join Rotaract</PremiumLink>
               <PremiumLink href="/projects" variant="ghost">Explore Projects</PremiumLink>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="animated-gradient mx-auto max-w-7xl rounded-[36px] border border-border-pink px-6 py-16 text-center shadow-2xl md:px-16">
           <h2 className="font-display text-4xl font-bold md:text-6xl">Ready to create visible community impact?</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">Join the club, subscribe for updates, or replace this CTA with the year&apos;s membership campaign.</p>
-          <div className="mt-8 flex justify-center"><PremiumLink href="/membership">Start Membership Application</PremiumLink></div>
+          <div className="mt-8 flex justify-center"><PremiumLink href={registrationFormUrl}>Register Now</PremiumLink></div>
         </div>
       </section>
     </>

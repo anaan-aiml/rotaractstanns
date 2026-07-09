@@ -16,7 +16,7 @@ export function GalleryGrid() {
     <>
       <div className="mb-10 flex flex-wrap justify-center gap-3">
         {categories.map((category) => (
-          <button key={category} onClick={() => setActive(category)} className={cn("rounded-full border px-5 py-3 text-sm font-bold transition", active === category ? "border-primary-pink bg-primary-pink text-white shadow-lg shadow-pink-200" : "border-border-pink bg-white text-dark-pink")}>{category}</button>
+          <button key={category} onClick={() => setActive(category)} className={cn("rounded-full border px-5 py-3 text-sm font-bold transition", active === category ? "border-primary-pink bg-primary-pink text-white shadow-lg shadow-slate-200" : "border-border-pink bg-white text-dark-pink")}>{category}</button>
         ))}
       </div>
       <div className="masonry">

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { FiCheckCircle } from "react-icons/fi";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/reveal";
-import { Card, PlaceholderImage, PremiumButton } from "@/components/ui";
+import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
+import { registrationFormUrl } from "@/lib/data";
 import { pageMeta } from "@/lib/utils";
 
 export const metadata: Metadata = pageMeta.membership;
@@ -17,7 +18,7 @@ const faqs = [
 export default function MembershipPage() {
   return (
     <>
-      <PageHero eyebrow="Membership" title="A clear pathway from interest to active service." body="Benefits, eligibility, FAQs, and a premium application form ready for real club process details.">
+      <PageHero eyebrow="Membership" title="A clear pathway from interest to active service." body="Benefits, eligibility, FAQs, and the official registration form for new members and interested participants.">
         <PlaceholderImage label="Upload Membership Campaign Photo Here" aspect="aspect-[4/3]" />
       </PageHero>
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
@@ -30,14 +31,9 @@ export default function MembershipPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-[0.9fr_1.1fr] md:px-6">
           <Card><h2 className="font-display text-4xl font-bold">Eligibility</h2><p className="mt-5 leading-8 text-muted">Replace this text with official eligibility, attendance, induction, and dues information. The template keeps details visible and easy to update.</p></Card>
           <Card>
-            <h2 className="font-display text-4xl font-bold">Application Form</h2>
-            <form className="mt-8 grid gap-4">
-              <input aria-label="Full name" placeholder="Full name" className="rounded-2xl border border-border-pink bg-white px-5 py-4 outline-primary-pink" />
-              <input aria-label="Email" placeholder="Email address" className="rounded-2xl border border-border-pink bg-white px-5 py-4 outline-primary-pink" />
-              <input aria-label="Phone" placeholder="Phone number" className="rounded-2xl border border-border-pink bg-white px-5 py-4 outline-primary-pink" />
-              <textarea aria-label="Why join" placeholder="Why do you want to join Rotaract?" rows={5} className="rounded-2xl border border-border-pink bg-white px-5 py-4 outline-primary-pink" />
-              <PremiumButton>Submit Application</PremiumButton>
-            </form>
+            <h2 className="font-display text-4xl font-bold">Register With Us</h2>
+            <p className="mt-5 leading-8 text-muted">Applications and registrations are collected through the official Google Form. Click below to open the form in a new tab.</p>
+            <div className="mt-8"><PremiumLink href={registrationFormUrl}>Open Registration Form</PremiumLink></div>
           </Card>
         </div>
       </section>

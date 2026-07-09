@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: pageMeta.home.description,
     url: siteUrl,
     siteName: "Rotaract Club of St. Ann's",
-    images: [{ url: "/placeholders/photo.svg", width: 1200, height: 800, alt: "Upload Club Photo Here" }],
+    images: [{ url: "/brand/rotaract-logo.png", width: 1552, height: 498, alt: "Rotaract Club of St. Ann's logo" }],
     locale: "en_US",
     type: "website"
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageMeta.home.title,
     description: pageMeta.home.description,
-    images: ["/placeholders/photo.svg"]
+    images: ["/brand/rotaract-logo.png"]
   },
   robots: {
     index: true,
@@ -45,9 +45,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@type": "Organization",
     name: "Rotaract Club of St. Ann's",
     url: siteUrl,
-    logo: `${siteUrl}/placeholders/logo.svg`,
+    logo: `${siteUrl}/brand/rotaract-logo.png`,
     description: pageMeta.home.description,
-    sameAs: ["https://www.instagram.com/", "https://www.linkedin.com/"]
+    sameAs: [
+      "https://www.instagram.com/rotaract_st.anns",
+      "http://www.youtube.com/@rotaractclubofstanns",
+      "https://www.linkedin.com/in/rotaract-club-of-st-ann-s-206381384"
+    ]
   };
 
   return (

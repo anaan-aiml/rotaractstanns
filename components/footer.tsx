@@ -29,7 +29,7 @@ export function Footer() {
             {contactDetails.map((detail) => <p key={detail.label} className="flex gap-3"><detail.icon className="mt-1 shrink-0" />{detail.label}</p>)}
           </div>
           <div className="mt-6 flex gap-3">
-            {socials.map((social) => <a key={social.label} href={social.href} aria-label={social.label} className="grid h-11 w-11 place-items-center rounded-full bg-white/16 backdrop-blur transition hover:-translate-y-1 hover:bg-white/25"><social.icon /></a>)}
+            {socials.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label} className="grid h-11 w-11 place-items-center rounded-full bg-white/16 backdrop-blur transition hover:-translate-y-1 hover:bg-white/25"><social.icon /></a>)}
           </div>
         </div>
       </div>

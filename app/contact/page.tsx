@@ -33,7 +33,7 @@ export default function ContactPage() {
               {contactDetails.map((detail) => <p key={detail.label} className="flex gap-3 text-muted"><detail.icon className="mt-1 shrink-0 text-primary-pink" />{detail.label}</p>)}
               <p className="flex gap-3 text-muted"><FiPhone className="mt-1 shrink-0 text-primary-pink" />Replace with official phone number</p>
             </div>
-            <div className="mt-6 flex gap-3">{socials.map((social) => <a key={social.label} aria-label={social.label} href={social.href} className="grid h-11 w-11 place-items-center rounded-full bg-soft-pink text-dark-pink transition hover:-translate-y-1"><social.icon /></a>)}</div>
+            <div className="mt-6 flex gap-3">{socials.map((social) => <a key={social.label} aria-label={social.label} href={social.href} target="_blank" rel="noreferrer" className="grid h-11 w-11 place-items-center rounded-full bg-soft-pink text-dark-pink transition hover:-translate-y-1"><social.icon /></a>)}</div>
           </Card>
           <Card>
             <div className="grid aspect-[4/3] place-items-center rounded-[24px] border border-dashed border-primary-pink bg-soft-pink/60 text-center text-dark-pink">

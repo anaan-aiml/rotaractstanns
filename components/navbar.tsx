@@ -23,11 +23,15 @@ export function Navbar() {
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 transition duration-300", scrolled ? "py-3" : "py-5")}>
       <nav className={cn("mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-3 transition duration-300 md:px-6", scrolled ? "glass" : "bg-transparent")}>
-        <Link href="/" className="flex items-center gap-3">
-          <span className="relative h-11 w-11 overflow-hidden rounded-2xl border border-border-pink bg-white shadow-lg">
-            <Image src="/placeholders/logo.svg" alt="Replace with Official Logo" fill sizes="44px" priority />
-          </span>
-          <span className="hidden font-display text-base font-bold leading-tight sm:block">Rotaract<br /><span className="text-primary-pink">St. Ann&apos;s</span></span>
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
+            src="/brand/rotaract-logo-navbar.png"
+            alt="Rotaract Club of St. Ann's logo"
+            width={284}
+            height={64}
+            priority
+            className="h-12 w-auto object-contain sm:h-14"
+          />
         </Link>
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {

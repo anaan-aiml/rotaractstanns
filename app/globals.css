@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff7fa;
+  --background: #f6fbfd;
   --foreground: #2d2d2d;
   --muted: #6b7280;
-  --pink: #e91e63;
-  --pink-dark: #c2185b;
-  --pink-soft: #fce4ec;
-  --pink-accent: #ff5c93;
-  --border: #f3d6e2;
+  --pink: #76a8c2;
+  --pink-dark: #3f6f86;
+  --pink-soft: #e8f3f8;
+  --pink-accent: #c0c0c0;
+  --border: #d7e5ec;
+  --silver: #c0c0c0;
 }
 
 @theme inline {
@@ -22,6 +23,7 @@
   --color-soft-pink: var(--pink-soft);
   --color-accent-pink: var(--pink-accent);
   --color-border-pink: var(--border);
+  --color-silver: var(--silver);
 }
 
 * {
@@ -37,8 +39,9 @@ body {
   margin: 0;
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(255, 92, 147, 0.2), transparent 34rem),
-    linear-gradient(180deg, #ffffff 0%, #fff7fa 38%, #ffffff 100%);
+    radial-gradient(circle at top left, rgba(118, 168, 194, 0.24), transparent 34rem),
+    radial-gradient(circle at 80% 10%, rgba(192, 192, 192, 0.22), transparent 28rem),
+    linear-gradient(180deg, #ffffff 0%, #f6fbfd 38%, #ffffff 100%);
   overflow-x: hidden;
 }
 
@@ -60,9 +63,9 @@ select {
 }
 
 .glass {
-  border: 1px solid rgba(243, 214, 226, 0.8);
+  border: 1px solid rgba(215, 229, 236, 0.88);
   background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 24px 70px rgba(194, 24, 91, 0.12);
+  box-shadow: 0 24px 70px rgba(63, 111, 134, 0.13);
   backdrop-filter: blur(22px);
 }
 
@@ -76,7 +79,7 @@ select {
   inset: -1px;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(233, 30, 99, 0.55), rgba(255, 255, 255, 0.3), rgba(255, 92, 147, 0.5));
+  background: linear-gradient(135deg, rgba(118, 168, 194, 0.65), rgba(255, 255, 255, 0.35), rgba(192, 192, 192, 0.7));
   opacity: 0;
   transition: opacity 240ms ease;
 }
@@ -87,9 +90,9 @@ select {
 
 .animated-gradient {
   background:
-    radial-gradient(circle at 15% 20%, rgba(255, 92, 147, 0.3), transparent 28rem),
-    radial-gradient(circle at 85% 12%, rgba(252, 228, 236, 0.9), transparent 28rem),
-    linear-gradient(135deg, #ffffff 0%, #fff7fa 45%, #fce4ec 100%);
+    radial-gradient(circle at 15% 20%, rgba(118, 168, 194, 0.3), transparent 28rem),
+    radial-gradient(circle at 85% 12%, rgba(192, 192, 192, 0.34), transparent 28rem),
+    linear-gradient(135deg, #ffffff 0%, #f6fbfd 45%, #e8f3f8 100%);
   background-size: 140% 140%;
   animation: gradientShift 12s ease-in-out infinite alternate;
 }
@@ -101,8 +104,8 @@ select {
 
 .placeholder-grid {
   background-image:
-    linear-gradient(rgba(233, 30, 99, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(233, 30, 99, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(118, 168, 194, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192, 192, 192, 0.16) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 

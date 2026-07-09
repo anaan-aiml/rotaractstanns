@@ -13,7 +13,7 @@ export function PremiumButton({ children, className, variant = "primary", ...pro
       className={cn(
         "group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-bold shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95",
         variant === "primary"
-          ? "bg-gradient-to-r from-primary-pink to-accent-pink text-white shadow-pink-200"
+          ? "bg-gradient-to-r from-primary-pink to-accent-pink text-white shadow-slate-200"
           : "border border-border-pink bg-white/75 text-dark-pink backdrop-blur-xl",
         className
       )}
@@ -26,16 +26,28 @@ export function PremiumButton({ children, className, variant = "primary", ...pro
 }
 
 export function PremiumLink({ children, className, variant = "primary", href }: { children: ReactNode; className?: string; variant?: "primary" | "ghost"; href: string }) {
+  const isExternal = href.startsWith("http");
+  const classes = cn(
+    "group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-bold shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95",
+    variant === "primary"
+      ? "bg-gradient-to-r from-primary-pink to-accent-pink text-white shadow-slate-200"
+      : "border border-border-pink bg-white/75 text-dark-pink backdrop-blur-xl",
+    className
+  );
+
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={classes}>
+        <span className="absolute inset-0 -translate-x-full bg-white/20 transition duration-500 group-hover:translate-x-full" />
+        <span className="relative inline-flex items-center gap-2">{children}<FiArrowRight /></span>
+      </a>
+    );
+  }
+
   return (
     <Link
       href={href}
-      className={cn(
-        "group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-full px-6 py-3 text-sm font-bold shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-95",
-        variant === "primary"
-          ? "bg-gradient-to-r from-primary-pink to-accent-pink text-white shadow-pink-200"
-          : "border border-border-pink bg-white/75 text-dark-pink backdrop-blur-xl",
-        className
-      )}
+      className={classes}
     >
       <span className="absolute inset-0 -translate-x-full bg-white/20 transition duration-500 group-hover:translate-x-full" />
       <span className="relative inline-flex items-center gap-2">{children}<FiArrowRight /></span>
