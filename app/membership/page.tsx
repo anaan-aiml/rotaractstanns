@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FiCalendar, FiCheckCircle, FiClock, FiMapPin } from "react-icons/fi";
 import { PageHero } from "@/components/page-hero";
 import { SectionHeader } from "@/components/reveal";
-import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
+import { Card, PremiumLink } from "@/components/ui";
 import { registrationFormUrl } from "@/lib/data";
 import { pageMeta } from "@/lib/utils";
 
@@ -20,7 +20,15 @@ export default function MembershipPage() {
   return (
     <>
       <PageHero eyebrow="Membership" title="A clear pathway from interest to active service." body="Benefits, eligibility, FAQs, and the official registration form for new members and interested participants.">
-        <PlaceholderImage label="Upload Membership Campaign Photo Here" aspect="aspect-[4/3]" />
+        <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white shadow-2xl">
+          <Image
+            src="/club/group-photo.png"
+            alt="Rotaract Club of St. Ann's members"
+            fill
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            className="object-contain object-center"
+          />
+        </div>
       </PageHero>
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
         <SectionHeader eyebrow="Benefits" title="What members can gain and contribute." />

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/page-hero";
 import { Reveal, SectionHeader } from "@/components/reveal";
-import { Card, PlaceholderImage } from "@/components/ui";
+import { Card } from "@/components/ui";
 import { values } from "@/lib/data";
 import { pageMeta } from "@/lib/utils";
 
@@ -26,7 +27,15 @@ export default function AboutPage() {
   return (
     <>
       <PageHero eyebrow="About" title="A legacy of service, leadership, and fellowship." body="The Rotaract Club of St. Ann's College for Women brings students together to serve the community, develop leadership skills, and grow through meaningful action.">
-        <PlaceholderImage label="Upload Club History Photo Here" aspect="aspect-[4/3]" />
+        <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white shadow-2xl">
+          <Image
+            src="/club/group-photo.png"
+            alt="Rotaract Club of St. Ann's group photo"
+            fill
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            className="object-contain object-center"
+          />
+        </div>
       </PageHero>
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
         <div className="grid gap-6 lg:grid-cols-3">

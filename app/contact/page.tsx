@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
-import { Card, PlaceholderImage } from "@/components/ui";
+import { Card } from "@/components/ui";
 import { contactDetails, socials } from "@/lib/data";
 import { pageMeta } from "@/lib/utils";
 
@@ -12,7 +13,15 @@ export default function ContactPage() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Connect, collaborate, and replace every detail with official channels." body="A polished contact page for inquiries, collaborations, membership questions, sponsors, and partners.">
-        <PlaceholderImage label="Upload Contact or Campus Photo Here" aspect="aspect-[4/3]" />
+        <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white shadow-2xl">
+          <Image
+            src="/club/group-photo.png"
+            alt="Rotaract Club of St. Ann's group photo"
+            fill
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            className="object-contain object-center"
+          />
+        </div>
       </PageHero>
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-24 lg:grid-cols-[1.1fr_0.9fr] md:px-6">
         <Card>

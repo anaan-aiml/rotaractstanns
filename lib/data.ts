@@ -31,27 +31,30 @@ export const values = [
 
 export const boardGroups = [
   {
-    title: "Executive Board",
+    title: "Executive Board Members",
     members: [
-      ["Member Name", "President", "Placeholder bio for the club president. Replace with official profile details and achievements."],
-      ["Member Name", "Secretary", "Placeholder bio for the secretary. Add responsibilities, interests, and club contribution."],
-      ["Member Name", "Treasurer", "Placeholder bio for the treasurer. Replace with finance and stewardship notes."]
-    ]
-  },
-  {
-    title: "Committee Chairs",
-    members: [
-      ["Member Name", "Community Service Chair", "Leads service drives and impact partnerships with warmth and discipline."],
-      ["Member Name", "Professional Development Chair", "Creates leadership workshops, speaker sessions, and member growth programs."],
-      ["Member Name", "Public Relations Chair", "Shapes campaign storytelling, social media presence, and event visibility."]
-    ]
-  },
-  {
-    title: "Directors",
-    members: [
-      ["Member Name", "Club Service Director", "Builds fellowship experiences and member engagement systems."],
-      ["Member Name", "International Service Director", "Coordinates global themes, cultural exchange, and district collaboration."],
-      ["Member Name", "Editor", "Maintains newsletters, reports, and campaign documentation."]
+      {
+        name: "Rtr. Syeda Hafsa Hussain",
+        position: "President",
+        bio: "Leads the club with vision, responsibility, and a strong commitment to service, fellowship, and member growth.",
+        image: "/board/syeda-hafsa-hussain.png"
+      },
+      {
+        name: "Rtr. Manaal",
+        position: "Secretary",
+        bio: "Supports smooth club coordination, documentation, communication, and the organized execution of club activities.",
+        image: "/board/manaal.png"
+      },
+      {
+        name: "Rtr. Syeda Husna Hussain",
+        position: "Immediate Past President",
+        bio: "Guides the board with continuity, experience, and support from the previous Rotaract year.",
+        image: "/board/syeda-husna-hussain.png"
+      },
+      ["Member Name", "Vice President", "Assists the president in planning, coordination, and ensuring club activities run with purpose."],
+      ["Member Name", "Joint Secretary", "Supports documentation, communication, records, and smooth follow-up across club activities."],
+      ["Member Name", "Sergeant at Arms", "Maintains discipline, meeting decorum, and a respectful environment during club gatherings."],
+      ["Member Name", "Treasurer", "Manages club finances, budgeting, and responsible stewardship of funds."]
     ]
   }
 ];

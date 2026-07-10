@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiChevronDown, FiHeart, FiUsers } from "react-icons/fi";
 import { Card, PlaceholderImage, PremiumLink } from "@/components/ui";
@@ -49,10 +50,19 @@ function Hero() {
         </Reveal>
         <Reveal delay={0.15}>
           <div className="glass glow-border relative rounded-[32px] p-4">
-            <PlaceholderImage priority label="Upload Club Group Photo Here" aspect="aspect-[5/4]" />
+            <div className="group relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white">
+              <Image
+                src="/club/group-photo.png"
+                alt="Rotaract Club of St. Ann's group photo"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-contain object-center transition duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
             <div className="absolute -bottom-6 left-6 right-6 grid gap-3 rounded-[24px] border border-border-pink bg-white/85 p-4 shadow-2xl backdrop-blur-xl sm:grid-cols-2">
               <div className="flex items-center gap-3"><FiHeart className="text-primary-pink" /><span className="text-sm font-bold">Service-first community</span></div>
-              <div className="flex items-center gap-3"><FiUsers className="text-primary-pink" /><span className="text-sm font-bold">Replace with official club photo</span></div>
+              <div className="flex items-center gap-3"><FiUsers className="text-primary-pink" /><span className="text-sm font-bold">St. Ann&apos;s Rotaract team</span></div>
             </div>
           </div>
         </Reveal>
@@ -90,7 +100,17 @@ export default function Home() {
       </section>
       <section className="bg-white py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 md:grid-cols-2 md:px-6">
-          <Reveal><PlaceholderImage label="Replace with Official Rotaract Club Photograph" aspect="aspect-[4/3]" /></Reveal>
+          <Reveal>
+            <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white shadow-2xl">
+              <Image
+                src="/club/group-photo.png"
+                alt="Rotaract Club of St. Ann's team"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-contain object-center"
+              />
+            </div>
+          </Reveal>
           <Reveal delay={0.1}>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary-pink">About Preview</p>
             <h2 className="font-display text-4xl font-bold md:text-6xl">A student-led club built on action, growth, and impact.</h2>
@@ -104,7 +124,15 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-2">
           {featuredAvenues.map((avenue) => (
             <Card key={avenue.title}>
-              <PlaceholderImage label="Upload Avenue Photo Here" aspect="aspect-[16/9]" />
+              <div className="relative aspect-[16/9] overflow-hidden rounded-[24px] border border-border-pink bg-white">
+                <Image
+                  src="/club/group-photo.png"
+                  alt={`Rotaract Club of St. Ann's ${avenue.title} avenue`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain object-center"
+                />
+              </div>
               <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-pink">Rotaract Avenue</p>
               <h3 className="mt-2 font-display text-2xl font-bold">{avenue.title}</h3>
               <p className="mt-3 leading-7 text-muted">{avenue.desc}</p>
@@ -114,8 +142,8 @@ export default function Home() {
       </section>
       <section className="bg-white py-24">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-[0.8fr_1.2fr] md:px-6">
-          <Reveal><PlaceholderImage src="/placeholders/profile.svg" label="Upload President Photo Here" aspect="aspect-[4/5]" /></Reveal>
-          <Reveal delay={0.1}><Card><p className="text-sm font-bold uppercase tracking-[0.28em] text-primary-pink">President&apos;s Message</p><blockquote className="mt-6 font-display text-3xl font-bold leading-tight md:text-5xl">“Replace this message with the president&apos;s official welcome note, vision for the year, and invitation to serve.”</blockquote><p className="mt-6 text-muted">President Name • Rotaract Club of St. Ann&apos;s</p></Card></Reveal>
+          <Reveal><PlaceholderImage src="/board/syeda-hafsa-hussain.png" label="Rtr. Syeda Hafsa Hussain" aspect="aspect-[4/5]" /></Reveal>
+          <Reveal delay={0.1}><Card><p className="text-sm font-bold uppercase tracking-[0.28em] text-primary-pink">President&apos;s Message</p><blockquote className="mt-6 font-display text-3xl font-bold leading-tight md:text-5xl">“Rotaract is a space where we learn to lead, serve with empathy, and grow together through every initiative we take up.”</blockquote><p className="mt-6 text-muted">Rtr. Syeda Hafsa Hussain • President</p></Card></Reveal>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
